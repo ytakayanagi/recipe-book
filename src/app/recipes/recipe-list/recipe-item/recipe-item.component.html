@@ -1,7 +1,8 @@
-<a href="" (click)="onSelected()">
+<a href="#" (click)="onSelected()">
     <div class="p-d-flex p-jc-between">
         <div>
             <h4>{{ recipe.name }}</h4>
+            <p-rating [(ngModel)]="recipe.rating" [cancel]="false" readonly></p-rating>
             <p>{{ recipe.description }}</p>
         </div>
         <img [src]="recipe.imagePath" alt="test" />

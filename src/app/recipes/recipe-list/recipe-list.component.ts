@@ -13,12 +13,14 @@ export class RecipeListComponent implements OnInit {
         new Recipe(
             'Spaghetti',
             'This is where the recipe description goes.',
-            'https://source.unsplash.com/100x100/?spaghetti'
+            'https://source.unsplash.com/100x100/?spaghetti',
+            5
         ),
         new Recipe(
             'Hamburger',
             'This is where the recipe description goes.',
-            'https://source.unsplash.com/100x100/?hamburger'
+            'https://source.unsplash.com/100x100/?hamburger',
+            4
         )
     ];
 

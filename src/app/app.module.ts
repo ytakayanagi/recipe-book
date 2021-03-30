@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { ListboxModule } from 'primeng/listbox';
 import { MenubarModule } from 'primeng/menubar';
+import { RatingModule } from 'primeng/rating';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -43,7 +44,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
         InputTextModule,
         ListboxModule,
         MenubarModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RatingModule
     ],
     providers: [],
     bootstrap: [AppComponent]
