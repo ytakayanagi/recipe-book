@@ -1,0 +1,11 @@
+<div class="p-grid">
+    <div class="p-col-12 p-md-5">
+        <app-recipe-list (recipeWasSelected)="selectedRecipe = $event"></app-recipe-list>
+    </div>
+    <div class="p-col-12 p-md-7">
+        <app-recipe-detail *ngIf="selectedRecipe; else infoText"></app-recipe-detail>
+        <ng-template #infoText>
+            <p>Please select a recipe!</p>
+        </ng-template>
+    </div>
+</div>

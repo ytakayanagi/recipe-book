@@ -1,0 +1,15 @@
+<div class="p-col-12">
+    <button pButton type="button" label="New Recipe" class="p-button-success"></button>
+</div>
+<p-divider></p-divider>
+<div class="p-col-12">
+    <p-listbox [options]="recipes" optionLabel="name">
+        <ng-template let-recipe pTemplate="item" *ngFor="let recipeEl of recipes">
+            <app-recipe-item
+                [recipe]="recipeEl"
+                (recipeSelected)="onRecipeSelected(recipeEl)"
+                style="width: 100%"
+            ></app-recipe-item
+        ></ng-template>
+    </p-listbox>
+</div>

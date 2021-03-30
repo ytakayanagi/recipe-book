@@ -1,0 +1,9 @@
+<a href="#" (click)="onSelected()">
+    <div class="p-d-flex p-jc-between">
+        <div>
+            <h4>{{ recipe.name }}</h4>
+            <p>{{ recipe.description }}</p>
+        </div>
+        <img [src]="recipe.imagePath" alt="test" />
+    </div>
+</a>
