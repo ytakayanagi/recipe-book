@@ -1,34 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Recipe } from '../recipe.model';
 
 interface Option {
-  name: string
+    name: string;
 }
 
 interface City {
-  name: string,
-  code: string
+    name: string;
+    code: string;
 }
 
 @Component({
-  selector: 'app-recipe-detail',
-  templateUrl: './recipe-detail.component.html',
-  styleUrls: ['./recipe-detail.component.css']
+    selector: 'app-recipe-detail',
+    templateUrl: './recipe-detail.component.html',
+    styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
+    @Input() recipe: Recipe;
+    options = [];
 
-  options = [];
-  
-  selectedOption: Option;
+    selectedOption: Option;
 
-  constructor() {
-    this.options = [
-      {name: 'To Shopping List'},
-      {name: 'Edit Recipe'},
-      {name: 'Delete Recipe'}
-    ]
-   }
+    constructor() {
+        this.options = [
+            { name: 'To Shopping List' },
+            { name: 'Edit Recipe' },
+            { name: 'Delete Recipe' }
+        ];
+    }
 
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {}
 }

@@ -1,15 +1,20 @@
 <div class="p-col-12">
-    <img src="" alt="" class="img-responsive">
+    <img
+        [src]="recipe.imagePath + '300x300/'"
+        alt="{{ recipe.name }}"
+        class="p-shadow-3"
+    />
 </div>
 <div class="p-col-12">
-    <h1>Recipe Name</h1>
+    <h1>{{ recipe.name }}</h1>
 </div>
 <div class="p-col-12">
-    <p-dropdown [options]="options" [(ngModel)]="selectedOption" placeholder="Manage Recipe" optionLabel="name"></p-dropdown>
+    <p-dropdown
+        [options]="options"
+        [(ngModel)]="selectedOption"
+        placeholder="Manage Recipe"
+        optionLabel="name"
+    ></p-dropdown>
 </div>
-<div class="p-col-12">
-    Description
-</div>
-<div class="p-col-12">
-    Ingredients
-</div>
+<div class="p-col-12">{{ recipe.description }}</div>
+<div class="p-col-12">Ingredients</div>

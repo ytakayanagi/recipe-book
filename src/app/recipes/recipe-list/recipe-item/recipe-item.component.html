@@ -5,6 +5,6 @@
             <p-rating [(ngModel)]="recipe.rating" [cancel]="false" readonly></p-rating>
             <p>{{ recipe.description }}</p>
         </div>
-        <img [src]="recipe.imagePath" alt="test" />
+        <img [src]="recipe.imagePath + '140x120/'" alt="test" class="p-shadow-3" />
     </div>
 </a>

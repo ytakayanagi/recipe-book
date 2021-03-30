@@ -3,13 +3,13 @@
         <div class="p-col-2">
             <div class="p-field">
                 <label for="name">Name</label>
-                <input type="text" id="name" pInputText />
+                <input type="text" id="name" pInputText #nameInput />
             </div>
         </div>
         <div class="p-col-2">
             <div class="p-field">
                 <label for="amount">Amount</label>
-                <input type="number" id="amount" pInputText />
+                <input type="number" id="amount" pInputText #amountInput />
             </div>
         </div>
         <div class="p-col-12">
@@ -18,6 +18,7 @@
                 type="submit"
                 label="Add"
                 class="p-button-success p-mr-2"
+                (click)="onAddItem()"
             ></button>
             <button
                 pButton

@@ -1,11 +1,13 @@
 <div class="p-grid">
     <div class="p-col-10">
-        <app-shopping-edit></app-shopping-edit>
+        <app-shopping-edit
+            (ingredientAdded)="onIngredientAdded($event)"
+        ></app-shopping-edit>
         <p-divider></p-divider>
-        <p-listbox [options]="ingredients" optionLabel="name">
-            <ng-template ngFor let-ingredient pTemplate="item">
+        <ul>
+            <a *ngFor="let ingredient of ingredients">
                 <div>{{ ingredient.name }} ({{ ingredient.amount }})</div>
-            </ng-template>
-        </p-listbox>
+            </a>
+        </ul>
     </div>
 </div>
