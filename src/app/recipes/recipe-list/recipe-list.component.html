@@ -4,7 +4,7 @@
 <p-divider></p-divider>
 <div class="p-col-12">
     <p-listbox [options]="recipes" optionLabel="name">
-        <ng-template let-recipe pTemplate="item" *ngFor="let recipeEl of recipes">
+        <ng-template pTemplate="item" ngFor let-recipeEl [ngForOf]="recipes">
             <app-recipe-item
                 [recipe]="recipeEl"
                 (recipeSelected)="onRecipeSelected(recipeEl)"

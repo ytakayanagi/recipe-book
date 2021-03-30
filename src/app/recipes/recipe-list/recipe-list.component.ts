@@ -11,14 +11,14 @@ export class RecipeListComponent implements OnInit {
     @Output() recipeWasSelected = new EventEmitter<Recipe>();
     recipes: Recipe[] = [
         new Recipe(
-            'A Test Recipe',
-            'This is simply a test',
-            'https://source.unsplash.com/100x100/?recipe'
+            'Spaghetti',
+            'This is where the recipe description goes.',
+            'https://source.unsplash.com/100x100/?spaghetti'
         ),
         new Recipe(
-            'A Test Recipe',
-            'This is simply a test',
-            'https://source.unsplash.com/100x100/?recipe'
+            'Hamburger',
+            'This is where the recipe description goes.',
+            'https://source.unsplash.com/100x100/?hamburger'
         )
     ];
 

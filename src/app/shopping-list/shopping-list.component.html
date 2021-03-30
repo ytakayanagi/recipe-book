@@ -1,10 +1,11 @@
 <div class="p-grid">
-<div class="p-col-10">
-    <app-shopping-edit></app-shopping-edit>
-    <p-divider></p-divider>
-    <p-listbox [options]="ingredients" optionLabel="name">
-        <ng-template let-ingredient pTemplate="item">
-            <div>{{ ingredient.name }} ({{ ingredient.amount }})</div>
-        </ng-template>
-    </p-listbox>
-</div></div>
+    <div class="p-col-10">
+        <app-shopping-edit></app-shopping-edit>
+        <p-divider></p-divider>
+        <p-listbox [options]="ingredients" optionLabel="name">
+            <ng-template ngFor let-ingredient pTemplate="item">
+                <div>{{ ingredient.name }} ({{ ingredient.amount }})</div>
+            </ng-template>
+        </p-listbox>
+    </div>
+</div>
